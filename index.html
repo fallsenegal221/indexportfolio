@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio MODOU MOUSTAPHA FALL</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif, sans-serif;
+            margin: 5;
+            padding: 5;
+            background-color: #f4f4f4;
+            background: linear-gradient(to right, #5ffff7, #feb47b);
+        }
+
+        header {
+            background-color: #198dda;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.9s;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 1rem 0;
+            background-color: #fff;
+            border-radius: 4px;
+        }
+
+        h1, h2 {
+            color: #0e1bd1;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin: 0.5rem 0 0.2rem;
+        }
+
+        form input, form textarea {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            padding: 0.7rem;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        form button:disabled {
+            background-color: #ccc;
+        
+        }
+
+        .project {
+            position: relative;
+            padding: 1rem;
+            background-color: #eee;
+            margin: 1rem 0;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .project:hover::after {
+            content: attr(data-info);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 0.5rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        button.prev, button.next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+        }
+
+        button.prev {
+            left: 0;
+        }
+
+        button.next {
+            right: 0;
+        }
+
+        header.sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#realisations">Réalisations</a></li>
+                <li><a href="#collaboration">Collaboration</a></li>
+                <li><a href="#temoignages">Témoignages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="accueil">
+            <h1>MODOU MOUSTAPHA FALL</h1>
+            <img src="mmf.jpg" alt="" width="300px" height="300px"  
+            <p>BIENVENUE SUR MON PORTFOLIO</p>
+        </section>
+        <section id="a-propos">
+            <h2>À propos de moi</h2>
+            <p>Je suis un jeune passionné de développement web, un domaine que j’ai appris à travers le programme DCLIC de l’AUF.
+                j’adore relever des défis techniques et créer des solutions innovantes pour améliorer l’expérience utilisateur. Toujours en quête de nouvelles opportunités, je suis enthousiaste à l’idée de collaborer sur des projets stimulants et de partager mes idées avec d’autres professionnels du secteur.</p>
+        
+           
+            </section>
+        <section id="competences">
+            <h2>Mes Compétences</h2>
+            <ul>
+                <li>Langage HTML</li>
+                <li>Langage CSS</li>
+                <li>Langage JavaScript</li>
+            </ul>
+        </section>
+        <section id="projets">
+            <h2>Mes Projets</h2>
+            <p>Voici quelques projets sur lesquels j'ai travaillé</p>
+            <div class="project" data-info="Description du projet 1">
+                <p>Projet 1</p>
+            </div>
+            <div class="project" data-info="Description du projet 2">
+                <p>Projet 2</p>
+            </div>
+        </section>
+        <section id="realisations">
+            <h2>Mes Réalisations</h2>
+            <div class="carousel">
+                <div class="carousel-item"><img src="image2.png" alt="" width="300px" height="300px"</div>
+                <div class="carousel-item"><img src="image3.PNG" alt="" width="300px" height="300px"</div>
+            </div>
+
+        </section>
+        <section id="collaboration">
+            <h2>Collaboration</h2>
+            <p>Découvrez les entreprises avec lesquelles j'ai collaboré...</p>
+        </section>
+        <section id="temoignages">
+            <h2>Témoignages</h2>
+            <p>Voici ce que disent mes clients...</p>
+        </section>
+        <section id="contact">
+            <h2>Contactez-moi</h2>
+            <form id="contact-form">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" disabled>Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        document.getElementById('contact-form').addEventListener('input', function(event) {
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const message = document.getElementById('message');
+            const submitButton = document.querySelector('form button');
+
+            if (name.value && email.value && message.value) {
+                submitButton.disabled = false;
+            } else {
+                submitButton.disabled = true;
+            }
+        });
+
+        let currentIndex = 0;
+
+        document.querySelector('.next').addEventListener('click', function() {
+            const items = document.querySelectorAll('.carousel-item');
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel();
+        });
+
+        document.querySelector('.prev').addEventListener('click', function() {
+            const items = document.querySelectorAll('.carousel-item');
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel();
+        });
+
+        function updateCarousel() {
+            const items = document.querySelectorAll('.carousel-item');
+            items.forEach((item, index) => {
+                item.style.transform = `translateX(-${currentIndex * 100}%)`;
+            });
+        }
+    </script>
+</body>
+</html>
